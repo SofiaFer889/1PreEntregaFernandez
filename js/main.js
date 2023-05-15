@@ -19,5 +19,3 @@ const totalAPagar = calcularMonto(producto, precio)
 
 alert('Su total a pagar es de:'+ '\n' + totalAPagar)
 alert('Gracias por su compra!!')
- 
-console.log(calcularMonto)
