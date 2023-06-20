@@ -1,6 +1,10 @@
 @import "variables";
 @import "mixins";
 
+.navbar {
+    background: red;
+}
+
 .fondo {
     background-color: black;
     color: rgb(254, 5, 5);

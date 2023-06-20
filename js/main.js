@@ -6,14 +6,14 @@ let selecProductos = Number(prompt("1-lona $1500 2-vinilo $150 3-banner $500 4-s
 function cantidadDeProduco() {
   let producto = parseFloat(prompt('Indique cuántos productos desea comprar'));
   return producto;
-}
+};
 
 function calcularMonto(producto, precio) {
   if (producto && precio) {
     const montoTotal = precio * producto;
     return montoTotal;
   }
-}
+};
 
 let cantidad = cantidadDeProduco();
 let total = 0;
@@ -45,7 +45,7 @@ while (selecProductos !== 0) {
   }
 
   selecProductos = Number(prompt("1-lona $1500 2-vinilo $150 3-banner $500 4-sticker $80"));
-}
+};
 
 productos.forEach(producto => {
   console.log(producto.nombre);
@@ -55,3 +55,47 @@ alert('Su total a pagar es de: \n' + total);
 let direccion = prompt('Por favor, ingrese ladireccion a donde enviarel pedido:');
 alert('Su pedido sera enciado a: ' + ' ' + direccion + ' ' + '¡Gracias por su compra!');
 console.log(selecProductos);
+
+const verCarrito = document.getElementById("verCarrito");
+const modalContainer= document.getElementById("modal-container");
+let carrito= [];
+
+const botonesComprar = document.querySelectorAll("#comprar");
+botonesComprar.forEach((boton) => {
+  boton.addEventListener("click", () => {
+    const titulo = boton.parentNode.querySelector(".card-title").innerText;
+    carrito.push({
+      nombre: titulo,
+    });
+    console.log("Producto agregado al carrito: " + titulo);
+    console.log("Contenido actual del carrito: ", carrito);
+  });
+});
+
+verCarrito.addEventListener("click", () => {
+  const modalHeader = document.createElement("div");
+  modalHeader.className = "modal-header";
+  modalHeader.innerHTML = `
+    <h1 class="modal-header-title">Compra</h1>
+  `;
+  modalContainer.append(modalHeader);
+
+  const modalButton = document.createElement("h1");
+  modalButton.innerText = "x";
+  modalButton.className = "modal-header-button";
+
+
+  modalHeader.append(modalButton);
+
+  carrito.forEach((productos) => {
+    let carritoContent = document.createElement("div");
+    carritoContent.className = "modal-contend";
+    carritoContent.innerHTML = `
+      <h3>${productos.nombre}</h3>
+      <p>${productos.precio}</p>
+    `;
+
+    modalContainer.append(carritoContent);
+  })
+  
+});
