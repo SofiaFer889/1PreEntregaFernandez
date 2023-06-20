@@ -1,6 +1,3 @@
-alert('Bienvenido');
-alert("Seleccione el producto que desea: (si desea salir, pulse la tecla 0)");
-
 let selecProductos = Number(prompt("1-lona $1500 2-vinilo $150 3-banner $500 4-stickers $80"));
 
 function cantidadDeProduco() {
@@ -51,11 +48,11 @@ productos.forEach(producto => {
   console.log(producto.nombre);
 });
 
-alert('Su total a pagar es de: \n' + total);
+/*alert('Su total a pagar es de: \n' + total);
 let direccion = prompt('Por favor, ingrese ladireccion a donde enviarel pedido:');
 alert('Su pedido sera enciado a: ' + ' ' + direccion + ' ' + '¡Gracias por su compra!');
 console.log(selecProductos);
-
+*/
 const verCarrito = document.getElementById("verCarrito");
 const modalContainer= document.getElementById("modal-container");
 let carrito= [];
@@ -68,11 +65,12 @@ botonesComprar.forEach((boton) => {
       nombre: titulo,
     });
     console.log("Producto agregado al carrito: " + titulo);
-    console.log("Contenido actual del carrito: ", carrito);
   });
 });
 
 verCarrito.addEventListener("click", () => {
+  modalContainer.innerHTML = "";
+  modalContainer.style.display = "flex";
   const modalHeader = document.createElement("div");
   modalHeader.className = "modal-header";
   modalHeader.innerHTML = `
@@ -84,6 +82,9 @@ verCarrito.addEventListener("click", () => {
   modalButton.innerText = "x";
   modalButton.className = "modal-header-button";
 
+  modalButton.addEventListener("click", () => {
+    modalContainer.style.display ="none";
+  });
 
   modalHeader.append(modalButton);
 
@@ -92,7 +93,6 @@ verCarrito.addEventListener("click", () => {
     carritoContent.className = "modal-contend";
     carritoContent.innerHTML = `
       <h3>${productos.nombre}</h3>
-      <p>${productos.precio}</p>
     `;
 
     modalContainer.append(carritoContent);

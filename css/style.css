@@ -1,7 +1,43 @@
-.navbar {
+.nav {
   background: red;
 }
 
+.imagen {
+  background-image: url(../media/img/impresiones.jpg);
+  height: 400px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.7;
+  position: relative;
+}
+
+.titulo {
+  font-size: 75px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Sigmar", cursive;
+  text-shadow: 3px 4px 4px #000000;
+}
+
+@media (max-width: 991px) {
+  .imagen {
+    height: 200px;
+    opacity: 0.7;
+  }
+  .titulo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: -60%;
+    transform: translate(-50%, -50%);
+    font-family: "Sigmar", cursive;
+    text-shadow: 1px 2px 2px #fff;
+  }
+}
 .fondo {
   background-color: black;
   color: rgb(254, 5, 5);
@@ -12,8 +48,6 @@
 }
 
 .row {
-  box-shadow: 0px 0px 10px rgba(10, 217, 253, 0.807);
-  border: 2px solid rgb(255, 255, 255);
   padding: 10px;
 }
 
