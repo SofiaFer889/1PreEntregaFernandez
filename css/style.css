@@ -1,5 +1,13 @@
 .nav {
+  position: sticky;
+  z-index: 3;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
   background: red;
+}
+.nav .carrito {
+  cursor: pointer;
 }
 
 .imagen {
@@ -38,6 +46,57 @@
     text-shadow: 1px 2px 2px #fff;
   }
 }
+.modal-container {
+  width: 80%;
+  margin: 0 10%;
+  max-height: 88vh;
+  background-color: #131313;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  overflow: auto;
+  z-index: 9;
+  top: 12vh;
+  scrollbar-color: none;
+}
+.modal-container .modal-container::-webkit-scrollbar {
+  display: none;
+}
+.modal-container .modal-header {
+  display: flex;
+  justify-content: space-around;
+  background-color: #0a0909;
+  width: 100%;
+}
+.modal-container .modal-header .title {
+  justify-self: start;
+  font-family: "Sigmar", cursive;
+  color: rgb(34, 5, 115);
+}
+.modal-container .modal-header .buttonX {
+  cursor: pointer;
+  font-family: "Sigmar", cursive;
+}
+.modal-container .modal-contend {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  margin: 10px;
+  color: #fff;
+  font-family: "Sigmar", cursive;
+}
+.modal-container .total-content {
+  font-size: 25px;
+  padding: 20px;
+  text-align: center;
+  padding-top: 20px;
+  font-family: "Sigmar", cursive;
+  color: rgb(34, 5, 115);
+}
+
 .fondo {
   background-color: black;
   color: rgb(254, 5, 5);
