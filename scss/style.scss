@@ -1,16 +1,17 @@
 @import "variables";
 @import "mixins";
-
-.nav {
+.navbar{
     position: sticky;
     z-index: 3;
     top: 0;
-    display: flex;
-    justify-content: space-between;
-    background: red;
+    background-color: red;
     .carrito{
         cursor: pointer;
     }
+}
+
+.filtro{
+    display: none;
 }
 
 .imagen {
@@ -100,7 +101,7 @@
         text-align: center;
         padding-top: 20px;
         font-family: $letra;
-        color: $color2;
+        color: #1ef805;
     }
 }
 

@@ -1,13 +1,15 @@
-.nav {
+.navbar {
   position: sticky;
   z-index: 3;
   top: 0;
-  display: flex;
-  justify-content: space-between;
-  background: red;
+  background-color: red;
 }
-.nav .carrito {
+.navbar .carrito {
   cursor: pointer;
+}
+
+.filtro {
+  display: none;
 }
 
 .imagen {
@@ -94,7 +96,7 @@
   text-align: center;
   padding-top: 20px;
   font-family: "Sigmar", cursive;
-  color: rgb(34, 5, 115);
+  color: #1ef805;
 }
 
 .fondo {

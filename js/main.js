@@ -76,7 +76,17 @@ verCarrito.addEventListener("click", () => {
 
   const totalCont = document.createElement("div");
   totalCont.className =  "total-content";
-  totalCont.innerHTML = `total a pagar: ${total}`;
+  totalCont.innerHTML = `total a pagar: $ ${total}`;
   modalContainer.append(totalCont)
   
+});
+
+document.addEventListener("keyup", tex => {
+  if (tex.target.matches("#buscador")) {
+    document.querySelectorAll(".articulos").forEach(art => {
+      art.textContent.toLowerCase().includes(tex.target.value.toLowerCase())
+      ? art.classList.remove("filtro")
+      : art.classList.add("filtro");
+    })
+  }
 });

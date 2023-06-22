@@ -14,8 +14,20 @@
 </head>
 <body class="fondo">
     <header>
-        <nav class="nav">
-            <h1 id="verCarrito" class="carrito">🛒</h1>
+        <nav class="navbar navbar-expand-lg">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="container-fluid">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <h1 id="verCarrito" class="carrito">🛒</h1>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" id="buscador" name="buscador" placeholder="🔎" aria-label="Search">
+                </form>
+              </div>
+            </div>
         </nav>
 
         <div class="imagen">
@@ -27,7 +39,7 @@
     <main>
         <section class="container">
             <div class="row g-4">
-                <div class="col-12 col-md-6">
+                <div class="articulos col-12 col-md-6">
                     <div class="card cards">
                         <img class="card-img-top imag" src="./media/img/lona.jpg" alt="imagen de una lona">
                         <div class="card-body">
@@ -37,7 +49,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6">
+                <div class="articulos col-12 col-md-6">
                     <div class="card cards">
                         <img class="card-img-top imag" src="./media/img/vinilo.jpg" alt="imagen de ejemplos de vinilos">
                         <div class="card-body">
@@ -47,7 +59,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6">
+                <div class="articulos col-12 col-md-6">
                     <div class="card cards">
                         <img class="card-img-top imag" src="./media/img/banner.png" alt="imagen de como se ve un banner en distintas dedidas">
                         <div class="card-body">
@@ -57,7 +69,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6">
+                <div class="articulos col-12 col-md-6">
                   <div class="card cards">
                       <img class="card-img-top imag" src="./media/img/sticker.png" alt="imagen de un ejemplo de plancha de sticker">
                       <div class="card-body">
