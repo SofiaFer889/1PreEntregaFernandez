@@ -7,6 +7,7 @@
     <meta name="description" content="pagina para comprar impresiones personalizadas, vinilos y banners">
     <title>Impresiones Personalizadas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +22,7 @@
             <div class="container-fluid">
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <h1 id="verCarrito" class="carrito">🛒</h1>
+                    <h1 id="verCarrito" class="carrito">🛒<span id="cantCarrito" class="cantCarrito"></span></h1>
                 </ul>
                 <form class="d-flex" role="search">
                   <input class="form-control me-2" type="search" id="buscador" name="buscador" placeholder="🔎" aria-label="Search">
@@ -30,7 +31,7 @@
             </div>
         </nav>
 
-        <div class="imagen">
+        <div class="articulos imagen">
             <h1 class="titulo">Impresiones</h1>
         </div>
 
@@ -45,7 +46,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Lona</h5>
                             <p class="card-text">Unico tamaño diponible por el momento de: 1,50 x 70 </p>
-                            <button class="button" data-product-id="1">comprar</button>
+                            <button class="button" data-product-id="1">🛒</button>
                         </div>
                     </div>
                 </div>
@@ -55,7 +56,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Vinilo</h5>
                             <p class="card-text">Por plancha apartir de 1m x 50cm </p>
-                            <button class="button" data-product-id="2">comprar</button>
+                            <button class="button" data-product-id="2">🛒</button>
                         </div>
                     </div>
                 </div>
@@ -65,7 +66,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Banner</h5>
                             <p class="card-text">la medida disponible es de : 468 x 60</p>
-                            <button class="button" data-product-id="3">comprar</button>
+                            <button class="button" data-product-id="3">🛒</button>
                         </div>
                     </div>
                 </div>
@@ -75,13 +76,14 @@
                       <div class="card-body">
                           <h5 class="card-title">Stickers</h5>
                           <p class="card-text">cada plancha de sticker de de tamaño de hoja a4</p>
-                          <button class="button" data-product-id="4">comprar</button>
+                          <button class="button" data-product-id="4">🛒</button>
                       </div>
                   </div>
               </div>
             </div>
           </section>
     </main>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="./js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>

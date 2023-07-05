@@ -98,6 +98,11 @@
   font-family: "Sigmar", cursive;
   color: #1ef805;
 }
+.modal-container .delate-product {
+  cursor: pointer;
+  font-family: "Sigmar", cursive;
+  color: rgb(255, 0, 0);
+}
 
 .fondo {
   background-color: black;
@@ -168,6 +173,22 @@
   font-family: "Sigmar", cursive;
   cursor: pointer;
   margin-top: 10px;
+}
+.button:hover {
+  background-color: rgb(13, 153, 0);
+}
+
+.cantCarrito {
+  font-family: "Sigmar", cursive;
+  background-color: rgb(0, 60, 255);
+  color: white;
+  border-radius: 50%;
+  font-size: 15px;
+  padding: 4px;
+  top: 37px;
+  left: 50px;
+  position: absolute;
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
