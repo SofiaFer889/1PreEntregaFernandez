@@ -49,7 +49,7 @@ const getProductos = async () => {
 
 const saveLocal = () => {
   localStorage.setItem("carrito", JSON.stringify(carrito));
-}
+};
 
 const mostrarCarrito = () => {
   modalContainer.innerHTML = "";
@@ -93,8 +93,42 @@ const mostrarCarrito = () => {
   const totalCont = document.createElement("div");
   totalCont.className =  "total-content";
   totalCont.innerHTML = `total a pagar: $ ${total}`;
-  modalContainer.append(totalCont)
+  modalContainer.append(totalCont);
   
+  const pagarTotal = document.createElement("button");
+  pagarTotal.className = "pagar";
+  pagarTotal.innerText = "Pagar Compra";
+  pagarTotal.addEventListener("click", () => {
+    
+    Toastify({
+      text: "GRACIAS POR SU COMPRA!!!",
+      duration: 2000,
+      close: true,
+      gravity: "top",
+      position: "center",
+      stopOnFocus: true,
+      style: {
+        background: "linear-gradient(to right, rgb(34, 5, 115), rgb(0, 60, 255))",
+        borderRadius: "2rem",
+        textTransform: "uppercase",
+        fontSize: ".75rem"
+      },
+      offset: {
+        x: '0rem',
+        y: '8.7rem',
+      },
+      onClick: function(){} 
+    }).showToast();
+
+    carrito = [];
+    saveLocal();
+
+    carritoConter();
+    mostrarCarrito();
+
+  });
+ modalContainer.append(pagarTotal);
+
 };
 
 verCarrito.addEventListener("click", mostrarCarrito);
@@ -130,6 +164,6 @@ document.addEventListener("keyup", tex => {
       art.textContent.toLowerCase().includes(tex.target.value.toLowerCase())
       ? art.classList.remove("filtro")
       : art.classList.add("filtro");
-    })
-  }
+    });
+  };
 });

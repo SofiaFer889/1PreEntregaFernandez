@@ -103,6 +103,19 @@
   font-family: "Sigmar", cursive;
   color: rgb(255, 0, 0);
 }
+.modal-container .pagar {
+  font-size: 18px;
+  background-color: rgba(185, 0, 0, 0.9098039216);
+  color: #090101;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-family: "Sigmar", cursive;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.modal-container .pagar:hover {
+  background-color: rgb(13, 153, 0);
+}
 
 .fondo {
   background-color: black;

@@ -109,6 +109,14 @@
         font-family: $letra;
         color: rgb(255, 0, 0);
     }
+
+    .pagar{
+        @include boton(#b90000e8, #090101);
+        margin-top: 10px;
+        &:hover{
+        background-color: rgb(13, 153, 0);
+        }
+    }
 }
 
 .fondo {

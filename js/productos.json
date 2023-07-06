@@ -18,5 +18,15 @@
       "id":4,
       "nombre": "sticker",
       "precio": 80
+    },
+    { 
+      "id":5,
+      "nombre": "taza",
+      "precio": 800
+    },
+    { 
+      "id":6,
+      "nombre": "gorra",
+      "precio": 1000
     }
 ]
